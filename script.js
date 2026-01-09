@@ -15,22 +15,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 
-  // Demo contact form handler
+  // Contact (you kept a form tag, so keep handler safe)
   window.handleSubmit = function (e) {
     e.preventDefault();
     const status = document.querySelector("[data-status]");
     if (status) status.textContent = "Message received! (Demo form — connect to a real service later.)";
-    e.target.reset();
     return false;
   };
 
-    // Slider (fade + dots, autoplay, no buttons)
+  // Slider (fade + dots, autoplay, no buttons)
   const track = document.querySelector("[data-slider]");
-  const slides = Array.from(document.querySelectorAll(".slide"));
   const dotsWrap = document.querySelector("[data-dots]");
   const sliderWrap = document.querySelector("[data-slider-wrap]");
 
-  if (!track || slides.length === 0 || !dotsWrap) return;
+  if (!track || !dotsWrap) return;
+
+  // IMPORTANT: only get slides inside THIS slider
+  const slides = Array.from(track.querySelectorAll(".slide"));
+  if (slides.length === 0) return;
 
   let index = 0;
   const total = slides.length;
@@ -77,24 +79,11 @@ document.addEventListener("DOMContentLoaded", () => {
     start();
   }
 
-  // pause on hover (nice UX)
+  // Pause on hover
   sliderWrap?.addEventListener("mouseenter", stop);
   sliderWrap?.addEventListener("mouseleave", start);
 
-  // init
+  // Init
   show(index);
   start();
-
-  // Force a visible change after 1 second (proves it works)
-  setTimeout(() => {
-    index = 1 % total;
-    update();
-    console.log("✅ moved to slide 2");
-  }, 1000);
-
-  // Autoplay
-  setInterval(() => {
-    index = (index + 1) % total;
-    update();
-  }, intervalTime);
 });
