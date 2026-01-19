@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PM | Web Development Team</title>
+  <meta name="description" content="PM is a small web development team building clean, responsive websites using HTML, CSS & JavaScript." />
+
+  <!-- hrefs unchanged -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="PM Logo.png">
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="logo" href="#top" aria-label="Go to top">
+        <span>PM</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <ul class="nav-links" data-nav>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a class="btn btn-small" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero container">
+      <div class="hero-text">
+        <p class="badge">Web Development Team</p>
+        <h1>PM</h1>
+        <p class="lead">
+          We build clean, responsive websites and landing pages using
+          <strong>HTML, CSS & JavaScript</strong>.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn btn-ghost" href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="hero-card" role="note" aria-label="Quick facts">
+        <h2>Quick Info</h2>
+        <ul>
+          <li>📍 Location: Canada</li>
+          <li>⚡ Focus: Landing pages & business websites</li>
+          <li>✅ Services: Design, build, redesign, responsiveness</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <div class="section-head">
+        <h2>About</h2>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Who we are</h3>
+          <p>
+            PM is a small front-end web development team focused on building modern,
+            fast-loading websites that work smoothly across all devices.
+          </p>
+          <p>
+            We specialize in landing pages, small business websites, and clean,
+            well-structured UI with strong usability.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Tools we use</h3>
+          <ul class="list">
+            <li>VS Code</li>
+            <li>Git & GitHub</li>
+            <li>Figma (basic)</li>
+            <li>Netlify / GitHub Pages</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p>Selected builds showcasing layout, responsiveness, and clean structure.</p>
+      </div>
+
+      <div class="slider" data-slider-wrap>
+        <div class="slider-track" data-slider>
+          <article class="project card slide">
+            <img src="proj 1 .png" alt="Project screenshot" />
+            <div class="project-body">
+              <h3>Demo Website</h3>
+              <p>Responsive demo site focused on clean layout and visual hierarchy.</p>
+            </div>
+          </article>
+
+          <article class="project card slide">
+            <img src="proj 2.png" alt="Project screenshot" />
+            <div class="project-body">
+              <h3>Demo Website</h3>
+              <p>Landing-style demo with clear sections and polished spacing.</p>
+            </div>
+          </article>
+
+          <article class="project card slide">
+            <img src="proj 1.1.png" alt="Project screenshot" />
+            <div class="project-body">
+              <h3>Business Website</h3>
+              <p>Multi-section business site with customized structure and styling.</p>
+            </div>
+          </article>
+
+          <article class="project card slide">
+            <img src="proj 2.1.png" alt="Project screenshot" />
+            <div class="project-body">
+              <h3>Business Website</h3>
+              <p>Modern business layout optimized for desktop and mobile.</p>
+            </div>
+          </article>
+
+          <article class="project card slide">
+            <img src="proj1.2.png" alt="Project screenshot" />
+            <div class="project-body">
+              <h3>Business Website</h3>
+              <p>Clean multi-section website with a professional visual style.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="slider-dots" data-dots aria-label="Project slideshow navigation"></div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section container">
+      <div class="section-head">
+        <h2>Skills</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="pill">HTML</div>
+        <div class="pill">CSS</div>
+        <div class="pill">JavaScript</div>
+        <div class="pill">Responsive Design</div>
+        <div class="pill">Basic SEO</div>
+        <div class="pill">Python</div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>Interested in working with PM? Get in touch.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Email</h3>
+          <p>
+            <a class="link" href="mailto:parsamodirkhazeni@gmail.com">
+              parsamodirkhazeni@gmail.com
+            </a>
+          </p>
+          <p class="note">We usually reply within 2–6 hours.</p>
+        </div>
+
+        <div class="card form">
+          <h3>How we can help</h3>
+          <p>
+            PM builds clean, responsive websites and landing pages.
+            Share a brief description of your project and any references,
+            and we’ll get back to you.
+          </p>
+          <br>
+          <p><strong>Email:</strong> parsamodirkhazeni@gmail.com</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer container">
+      <p>© <span id="year"></span> PM • Built with HTML/CSS/JS</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
